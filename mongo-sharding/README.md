@@ -22,7 +22,7 @@ check.ps1
 
 ### Если вы запускаете проект на локальной машине
 
-Откройте в браузере http://localhost:8080
+Откройте в браузере http://localhost:8080/docs
 
 ### Если вы запускаете проект на предоставленной виртуальной машине
 
@@ -104,11 +104,10 @@ docker exec -it mongos_router mongosh --port 27020
  > use somedb;
  > db.helloDoc.countDocuments();
  > exit(); 
-Получится результат — 492 документа.
+
 Сделайте проверку на втором шарде:
 
 docker exec -it shard2 mongosh --port 27019
  > use somedb;
  > db.helloDoc.countDocuments();
  > exit(); 
-Получится результат — 508 документов.
