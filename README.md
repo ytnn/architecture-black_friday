@@ -9,16 +9,22 @@
 docker compose up -d --build
 ```
 
+Проверяем что все контейнеры запущены
+
+```shell
+docker compose ps
+```
+
 Заполняем mongodb данными
 
 ```shell
-init.ps1
+./init.sh
 ```
 
 ## Как проверить
 
 ```shell
-check.ps1
+./check.sh
 ```
 
 После первого обращения по адресу http://localhost:8080/helloDoc/users ответ от сервера приходит гораздо быстрее.
