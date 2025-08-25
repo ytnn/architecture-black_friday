@@ -1,12 +1,11 @@
 # pymongo-api
 
 ## Как запустить
-Перейти в директорию sharding-repl-cache
 
 Запускаем mongodb и приложение
 
 ```shell
-docker compose up -d --build
+docker compose up -d
 ```
 
 Проверяем что все контейнеры запущены

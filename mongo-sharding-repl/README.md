@@ -1,38 +1,23 @@
 # pymongo-api
 
 ## Как запустить
-Перейти в директорию sharding-repl-cache
 
 Запускаем mongodb и приложение
 
 ```shell
-docker compose up -d --build
-```
-
-Проверяем что все контейнеры запущены
-
-```shell
-docker compose ps
+docker compose up -d
 ```
 
 Заполняем mongodb данными
 
 ```shell
-./init.sh
+init.ps1
 ```
 
 ## Как проверить
 
 ```shell
-./check.sh
-```
-
-После первого обращения по адресу http://localhost:8080/helloDoc/users ответ от сервера приходит гораздо быстрее.
-Так же можно проверить состояния памяти кэша командой:
-
-```shell
-docker exec -it redis redis-cli INFO memory
-
+check.ps1
 ```
 
 ### Если вы запускаете проект на локальной машине
