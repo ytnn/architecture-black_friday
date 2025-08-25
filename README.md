@@ -1,24 +1,37 @@
 # pymongo-api
 
 ## Как запустить
+Перейти в директорию sharding-repl-cache
 
 Запускаем mongodb и приложение
 
 ```shell
-docker compose up -d
+docker compose up -d --build
 ```
 
 Заполняем mongodb данными
 
 ```shell
-./scripts/mongo-init.sh
+init.ps1
 ```
 
 ## Как проверить
 
+```shell
+check.ps1
+```
+
+После первого обращения по адресу http://localhost:8080/helloDoc/users ответ от сервера приходит гораздо быстрее.
+Так же можно проверить состояния памяти кэша командой:
+
+```shell
+docker exec -it redis redis-cli INFO memory
+
+```
+
 ### Если вы запускаете проект на локальной машине
 
-Откройте в браузере http://localhost:8080
+Откройте в браузере http://localhost:8080/docs
 
 ### Если вы запускаете проект на предоставленной виртуальной машине
 
@@ -32,4 +45,4 @@ curl --silent http://ifconfig.me
 
 ## Доступные эндпоинты
 
-Список доступных эндпоинтов, swagger http://<ip виртуальной машины>:8080/docs
+Список доступных эндпоинтов, swagger http://<ip виртуальной машины>:8080/docs 
